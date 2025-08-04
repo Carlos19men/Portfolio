@@ -1,0 +1,26 @@
+---
+import '../styles/global.css'
+import NavigateButton from './NavigateButton.astro';
+---
+
+<header>
+    <img src="/assets/logo.png" alt="Logo" class="w-[932px]"/>
+
+    <nav class="inline-flex">
+        <NavigateButton href="/" text="Home" />
+        <NavigateButton href="/about" text="About" />
+        <NavigateButton href="/" text="Home" />
+        <NavigateButton href="/projects" text="Projects" />
+        <NavigateButton href="/tecnologies" text="Technologies" />
+        <NavigateButton href="/contact" text="Contact" />
+        <NavigateButton href="/github" text="GitHub" />
+        <NavigateButton href="/linkedin" text="LinkedIn" />
+    </nav>
+
+</header>
+
+<style>
+    header {
+        display: inline-flex;
+    }
+</style>
