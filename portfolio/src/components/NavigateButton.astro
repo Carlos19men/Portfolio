@@ -8,6 +8,14 @@ const { href, text }: Props = Astro.props;
 ---
 
 
-<a href={href} class="bg-red w-">
-    <h2 class=" ">{text}</h2>
+<a href={href} class="bg-red text-white text-[16px]">
+    <h2 class="">{text}</h2>
+    <slot/>
 </a>
+
+<style>
+
+  a {
+    font-family: 'Jersey 25', system-ui;
+  }
+</style>
