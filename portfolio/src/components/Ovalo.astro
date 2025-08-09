@@ -1,0 +1,24 @@
+---
+interface Props{
+    color: string;
+    width: number;
+    height: number;
+    left: number;
+    top: number;
+    zIndex: number;
+    rotation: number;
+};
+
+const { color, width, height, left, top, zIndex, rotation }: Props = Astro.props;
+---
+
+<div class=`w-[${width}px] 
+            h-[${height}px] 
+            bg-[${color}] 
+            absolute 
+            top-[${top}px] 
+            left-[${left}px] 
+            z-[${zIndex}]  
+            rounded-[50%] 
+            rotate-[${rotation}deg]>`>
+</div>
