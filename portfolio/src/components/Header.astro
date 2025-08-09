@@ -4,26 +4,23 @@ import NavigateButton from './NavigateButton.astro';
 import { Icon } from 'astro-icon/components'
 ---
 
-<header class="w-[932px] h-20 p-5 justify-between">
+<header class="flex w-[99%] px- h-20 p-5 mt-3.5 justify-center">
     <img src="/assets/logo.png" alt="Logo" class="w-[932px]"/>
 
-    <nav class="inline-flex gap-4 text-[16px]">
+    <nav class="flex justify-self-center items-center gap-7">
         <NavigateButton href="/" text="Home" />
         <NavigateButton href="/about" text="About" />
         <NavigateButton href="/" text="Home" />
         <NavigateButton href="/projects" text="Projects" />
         <NavigateButton href="/tecnologies" text="Technologies" />
         <NavigateButton href="/contact" text="Contact" />
-        <NavigateButton href="/github" text="">
-            <Icon name="github-mark-white.png"/>
-        </NavigateButton>
-        <NavigateButton href="/linkedin" text="" > logo</NavigateButton>
+
+        <a href="" class="ml-4">
+            <Icon name="github-white" size={42}/>
+        </a>
+        <a href="">
+            <Icon name="linkedin" size={60} class=""/>
+        </a>
     </nav>
 
 </header>
-
-<style>
-    header {
-        display: inline-flex;
-    }
-</style>
