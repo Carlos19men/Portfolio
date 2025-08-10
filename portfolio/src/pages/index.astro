@@ -2,6 +2,8 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Ovalo from '../components/Ovalo.astro';
+import Title from '../components/Title.astro';
+import Card from '../components/Card.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -21,11 +23,23 @@ import Ovalo from '../components/Ovalo.astro';
 		<Ovalo width={481} height={233} color="#04293B" left={110} top={4} zIndex={0} rotation={57} opaciti={0.5}/>
 		
 		<div class="relative left-[80px]">
-			<img class=" w-90 right-[15vw] object-contain opac" src="/images/mental-model.png" alt="Astro Logo" />
-		</div>		
+			<img class=" w-90 right-[15vw] object-contain" src="/images/mental-model.png" alt="Astro Logo" />
+		</div>	
+		
 	</div>
 
+	{/* Proyectos */ }
+	<div class="m-auto w-11/12 bg-red justify-center mt-20">
+		<Title title="Proyectos" />
+		<Card title="Proyecto 1" 
+			description="Descripción del proyecto 1" 
+			img="project1.png" 
+			widht={300}
+			height={150}
+			href='#'/>
+	</div>
 	
+
 	
 	
 
