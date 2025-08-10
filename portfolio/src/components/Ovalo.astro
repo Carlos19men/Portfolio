@@ -3,7 +3,8 @@ interface Props{
     color: string;
     width: number;
     height: number;
-    left: number;
+    left?: number;
+    right?: number;
     top: number;
     zIndex: number;
     rotation: number;
@@ -18,8 +19,8 @@ const { color, width, height, left, top, zIndex, rotation,opaciti }: Props = Ast
     width: ${width}px;
     height: ${height}px;
     background-color: ${color};
-    left: ${left}px;
-    top: ${top}px;
+    left: ${left}vh;
+    top: ${top}vw;
     z-index: ${zIndex};
     transform: rotate(${rotation}deg);
     position: relativa;
