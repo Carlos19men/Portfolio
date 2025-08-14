@@ -5,13 +5,13 @@ interface Props{
     height: number;
     left?: number;
     right?: number;
-    top: number;
-    zIndex: number;
-    rotation: number;
+    top?: number;
+    zIndex?: number;
+    rotation?: number;
     opaciti?: number;
 };
 
-const { color, width, height, left, top, zIndex, rotation,opaciti }: Props = Astro.props;
+const { color, width, height, left,right, top, zIndex, rotation,opaciti }: Props = Astro.props;
 ---
 <div
   class="absolute rounded-[75%]"
@@ -19,10 +19,11 @@ const { color, width, height, left, top, zIndex, rotation,opaciti }: Props = Ast
     width: ${width}px;
     height: ${height}px;
     background-color: ${color};
-    left: ${left}vh;
-    top: ${top}vw;
-    z-index: ${zIndex};
-    transform: rotate(${rotation}deg);
+    right: ${right || null}vh;
+    left: ${left || null}vh;
+    top: ${top || null}vw;
+    z-index: ${zIndex || 0};
+    transform: rotate(${rotation || 0}deg);
     position: relativa;
     opacity: ${opaciti || 1};
   `}
