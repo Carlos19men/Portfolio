@@ -29,15 +29,30 @@ import Card from '../components/Card.astro';
 	</div>
 
 	{/* Proyectos */ }
-	<div class="m-auto w-11/12 bg-red justify-center mt-20">
+	<div class="flex justify-center mt-20">
+		<Ovalo width={681} height={463} color="#04293B"  opaciti={0.4}/>
+
 		<Title title="Proyectos" />
-		<Card title="Proyecto 1" 
-			description="Descripción del proyecto 1" 
-			img="project1.png" 
-			widht={300}
-			height={150}
-			href='#'/>
+
+		
 	</div>
+
+	<div class="flex justify-center mt-5 h-[500px]">
+
+		<Card title="Proyecto 1" 
+			description="Este es un proyecto de ejemplo que muestra cómo se puede utilizar Astro para crear sitios web modernos y rápidos." 
+			img="project1.png" 
+			widht={700}
+			height={350}
+			href='#'/>
+		
+		
+	</div>
+
+	<div class="h-[500px]">
+		a
+	</div>
+
 	
 
 	
