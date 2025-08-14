@@ -1,5 +1,5 @@
 ---
-
+import { Icon } from 'astro-icon/components'
 interface Props{
     img: string;
     widht: number;
@@ -13,7 +13,7 @@ interface Props{
 
 const {img, widht, height, title, description, href, code, run}: Props = Astro.props;
 ---
-<div class="bg-[#04293B] w-[500px] h-[300px] rounded-3xl relative"
+<div class="rounded-3xl relative shadow-2xl"
     style=`width: ${widht}px; height: ${height}px;`
    
 >
@@ -21,8 +21,24 @@ const {img, widht, height, title, description, href, code, run}: Props = Astro.p
     src=`/images/${img}` 
     alt=""
     >
-    <h2 class="text-[26px] pl-[40px] pt-[10px]">Titulo</h2>
-    <p class="text-[16px] pl-[40px] pt-[10px]">{description}</p>
+    <div class="h-[160px] bg-[#064662] rounded-bl-3xl rounded-br-3xl ">
+        <h2 class="text-3xl pl-[40px] pt-2">{title}</h2>
+    
+        <p class="text-[16px] px-[20px] pt-[5px] text-[#ffffff] opacity-60 font-medium">{description}</p>
+        
+        <div class="w-[100%]  flex gap-6 justify-end-safe pb-3">
+            <button class="bg-[#04243C] p-1 text-white rounded-3xl w-[70px] font-medium  hover:bg-[#04293C] flex justify-center items-center">
+                view
+                <Icon name="arrow"/>
+            </button>
+            <button class="bg-[#ECB364] p-1 text-white rounded-3xl w-[70px] mr-6 font-medium hover:bg-[#CCA464] flex justify-center items-center">
+                Run 
+                <Icon name="play" class="mt-0.5"/>
+            </button>
+        </div>
+
+    </div>
+    
 
 </div>
 
