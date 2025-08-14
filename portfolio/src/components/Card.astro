@@ -14,6 +14,7 @@ interface Props{
 const {img, widht, height, title, description, href, code, run}: Props = Astro.props;
 ---
 <div class="bg-[#04293B] w-[500px] h-[300px] rounded-3xl relative"
+    style=`width: ${widht}px; height: ${height}px;`
    
 >
     <img class="object-cover w-full h-[60%] rounded-tl-3xl rounded-tr-3xl" 
