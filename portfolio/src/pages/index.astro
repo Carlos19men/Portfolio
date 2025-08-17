@@ -4,8 +4,9 @@ import Layout from '../layouts/Layout.astro';
 import Ovalo from '../components/Ovalo.astro';
 import Title from '../components/Title.astro';
 import Card from '../components/Card.astro';
+import Proyects from '../components/Proyects.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
 
 <Layout>
@@ -42,11 +43,27 @@ import Card from '../components/Card.astro';
 		<Card title="PymeUp" 
 			description="Una plataforma web dirigida a las pequeñas y medianas empresas de ciudad Guayana, destinada a organizar y aumentar las ventas de tu negocio" 
 			img="project1.png" 
-			widht={534}
-			height={327}
-			href='#'/>
+			href='#'
+			isPrincipal/>
 		
 		
+	</div>
+
+	<div>
+		{
+			/*aquí aplica un ciclo repetitivo considerando que los  otros proyectos 
+			se agrupan en pareja, la primera pareja se muestra del lado izquierdo de la pantalla
+			y la segunda del lado derecho, esto se repite cada dos parejas, el ciclo termina cuando 
+			aparezca un proyecto solo o siemplemente cuando no halla más parejas. 
+			*/
+
+			//primero armamos la forma base 
+
+
+		}
+
+		<Proyects proyects={[]}/>
+
 	</div>
 
 	<div class="h-[500px]">
