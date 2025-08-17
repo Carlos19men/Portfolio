@@ -1,0 +1,59 @@
+---
+import Card from "./Card.astro"
+import Ovalo from "./Ovalo.astro"
+
+//Aquí van todos los proyectos que quieras ubicar para no tener que hacero en el html
+
+//proyecto principal 
+
+//otros proyectos 
+
+
+interface Proyect{
+    title: string,
+    colors: string[3],
+    img: string,
+    description: string,
+    href: string
+}
+
+
+interface Props{
+    proyects: Proyect[];
+}
+
+const {proyects }: Props = Astro.props;
+
+/*<Ovalo width={681} height={463} color="#04293B" top={50}  opaciti={0.4}/>
+	<Ovalo width={681} height={463} color="#04293B" top={50}  opaciti={0.4}/>
+    */
+---
+
+<div class="grid grid-cols-2 gap-x-[40vw]">
+
+	
+    <div class="grid grid-rows-2">
+        <div class="ml-20">
+            <Card title="PymeUp" 
+			description="Una plataforma web dirigida a las pequeñas y medianas empresas de ciudad Guayana, destinada a organizar y aumentar las ventas de tu negocio" 
+			img="project1.png" 
+			href='#'
+            />
+        </div>
+        
+        <div class="ml-44">
+            <Card title="PymeUp" 
+			description="Una plataforma web dirigida a las pequeñas y medianas empresas de ciudad Guayana, destinada a organizar y aumentar las ventas de tu negocio" 
+			img="project1.png" 
+			href='#'   
+               
+        />
+        </div>  
+    </div>
+    
+    <div>
+        <img src="images/cuadro-muro.png" class="w-96 h-96 object-contain"/>
+        <img src="images/cuadro-base.png" class="w-96 h-96 object-contain ml-40"/>
+
+    </div>
+</div>
